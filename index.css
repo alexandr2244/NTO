@@ -37,20 +37,22 @@ nav ul{
   height: 100%
 }
 nav ul li{
-  height: 50px;
-  width: 100%;
-  background: #999;
+
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 nav ul li a{
+  padding: 10px 0;
+  width: 100%;
+  background: #999;
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+  text-align: center;
 }
-nav ul li:hover{
+nav ul li a:hover{
   background: #88f;
 }
 header{
@@ -78,4 +80,48 @@ footer{
 footer h2{
   width: 100%;
   text-align: center;
+}
+footer .social{
+
+}
+footer .social img{
+  width: 50px;
+  margin-left: 20px;
+}
+button{
+  color: #fff;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #fdbe33 #000 #d77206;
+  border-radius: 6px;
+  background: linear-gradient(#f3ae0f, #e38916) #e38916;
+  box-shadow: 2px 2px 5px #000;
+  transform: none;
+  transition: 0.5s;
+}
+button:hover{
+  transition: 0.5s;
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+.field{
+  padding: 10px;
+  width: calc(100% - 20px);
+  color: #fff;
+}
+.field input[type="text"],
+.field input[type="number"]{
+  width: calc(100% - 10px);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  text-shadow: 0 0 10px #000;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
