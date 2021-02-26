@@ -2,12 +2,57 @@
   margin: 0;
   padding: 0;
 }
-.side_bar{
-  width: 40%;
+header{
+  height: 60px;
+  position: relative;
+  width: calc(100% - 10px);
+  background: #333;
   margin: 5px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+header h1{
+  text-align: left;
+  margin-left: 20px;
+  color: #fff;
+}
+.nav{
+  width: 100%;
+}
+.nav nav{
+  max-height: 0px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: auto;
+  top:60px;
+  transition: 1.5s;
+  background: #999;
+}
+.nav button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  background: #88f;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+.nav button:hover{
+  transform: scale(0.9);
+}
+
+.nav button:active{
+  transform: scale(0.8);
+}
+.nav nav.active{
+  max-height: 100vh;
 }
 .content{
-  width: 60%;
+  width: 100%;
   margin: 5px;
   padding: 5px;
   background: #333;
@@ -55,19 +100,6 @@ nav ul li a{
 nav ul li a:hover{
   background: #88f;
 }
-header{
-  height: 100px;
-  width: calc(100% - 10px);
-  background: #333;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header h1{
-  text-align: center;
-  color: #fff;
-}
 footer{
   display: flex;
   justify-content: center;
@@ -88,10 +120,10 @@ footer .social img{
   width: 50px;
   margin-left: 20px;
 }
-button{
+.button button{
   color: #fff;
   text-decoration: none;
-  padding: .5em 2em;
+  padding: 10px 20px;
   outline: none;
   border-width: 2px 0;
   border-style: solid none;
@@ -102,7 +134,7 @@ button{
   transform: none;
   transition: 0.5s;
 }
-button:hover{
+.button button:hover{
   transition: 0.5s;
   transform: translate(2px, 2px);
   box-shadow: none;
@@ -113,7 +145,8 @@ button:hover{
   color: #fff;
 }
 .field input[type="text"],
-.field input[type="number"]{
+.field input[type="number"],
+.field input[type="email"]{
   width: calc(100% - 10px);
   padding: 5px;
   border-radius: 5px;
