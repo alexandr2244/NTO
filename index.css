@@ -52,7 +52,7 @@ header h1{
   max-height: 100vh;
 }
 .content{
-  width: 100%;
+  width: 40%;
   margin: 5px;
   padding: 5px;
   background: #333;
@@ -138,6 +138,10 @@ footer .social img{
   transition: 0.5s;
   transform: translate(2px, 2px);
   box-shadow: none;
+}
+.profile{
+  width: 40%;
+  padding: 5px;
 }
 .field{
   padding: 10px;
