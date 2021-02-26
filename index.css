@@ -52,10 +52,13 @@ header h1{
   max-height: 100vh;
 }
 .content{
-  width: 40%;
+  width: 60%;
   margin: 5px;
   padding: 5px;
   background: #333;
+}
+.content.e{
+  width: 100%
 }
 .content img{
   display: inline;
@@ -142,6 +145,10 @@ footer .social img{
 .profile{
   width: 40%;
   padding: 5px;
+  margin: 5px;
+  background: #333;
+  overflow-y: scroll;
+  color: #fff;
 }
 .field{
   padding: 10px;

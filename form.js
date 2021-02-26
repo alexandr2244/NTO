@@ -4,23 +4,30 @@ let sername = document.getElementById('sername')
 let years = document.getElementById('years')
 let mail = document.getElementById('mail')
 
+let dataArray = []
+
 const storegeName = 'ntodata';
 
 function save() {
   let data = {
     name:name.value,
-    sername:name.sername,
-    years:name.years,
-    mail:name.mail
+    sername:sername.value,
+    years:years.value,
+    mail:mail.value
   }
-
+  console.log(dataArray);
+  dataArray.push(data)
   localStorage.setItem(storegeName, JSON.stringify({
-    data: data
+    data: dataArray
   }))
 
 }
 
 function getData() {
-  let data = localStorage.getItem(storegeName)
+  let data = JSON.parse(localStorage.getItem(storegeName))
+  console.log(data);
+  if(data)
+    dataArray = data.data
+  console.log(dataArray);
 }
 getData()
